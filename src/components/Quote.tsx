@@ -7,17 +7,24 @@ const Quote = () => {
     author: '',
   })
 
-  useEffect(() => {
+  const generateQuote = () => {
     const i = Math.floor(Math.random() * quotes.length)
 
     setQuote({ quote: quotes[i].phrase, author: quotes[i].author })
-  }, [])
+  }
+
+  useEffect(() => generateQuote, [])
 
   return (
-    <div className='quote-container'>
-      <h3 className='quote'>{quote.quote}</h3>
-      <p className='author'>{quote.author}</p>
-    </div>
+    <>
+      <div className='quote-container'>
+        <h3 className='quote'>{quote.quote}</h3>
+        <p className='author'>{quote.author}</p>
+      </div>
+      <button type='button' onClick={generateQuote}>
+        New Quote
+      </button>
+    </>
   )
 }
 
