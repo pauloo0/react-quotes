@@ -6,18 +6,42 @@
   padding: 0;
 }
 
-body {
+.page {
   font-family: $primary-font;
   background-color: $bgc;
-  color: $primary-text;
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-h1 {
+.quote-container {
+  background-color: #fff;
+  padding: 2rem;
+  width: 80%;
+  min-height: 300px;
+  height: auto;
+}
+
+.quote {
+  border: 1px solid blue;
+}
+
+.author {
+  border: 1px solid red;
+  text-align: end;
+}
+
+.quote-btn {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  font-size: 20px;
   font-weight: bold;
-  font-size: 5rem;
+  font-family: $primary-font;
+  background: linear-gradient(45deg, $primary-text, $secondary-text);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
 }
