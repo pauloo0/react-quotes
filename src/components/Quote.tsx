@@ -18,8 +18,10 @@ const Quote = () => {
   return (
     <div className='page'>
       <div className='quote-container'>
-        <h3 className='quote'>{quote.quote}</h3>
-        <p className='author'>{quote.author}</p>
+        <h3 className='quote'>"{quote.quote}"</h3>
+        <p className='author'>
+          <em>- {quote.author}</em>
+        </p>
       </div>
       <button type='button' className='quote-btn' onClick={generateQuote}>
         New Quote

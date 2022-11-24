@@ -18,21 +18,34 @@
 }
 
 .quote-container {
-  background-color: #fff;
-  padding: 2rem;
   width: 80%;
-  min-height: 300px;
+  max-width: 700px;
+  min-height: 150px;
   height: auto;
+  height: auto;
+  position: relative;
+}
+
+.quote, .author {
+  position: absolute;
+  color: #fff;
+  opacity: .8;
 }
 
 .quote {
-  border: 1px solid blue;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: justify;
+  letter-spacing: 1px;
 }
 
 .author {
-  border: 1px solid red;
-  text-align: end;
+  bottom: 1rem;
+  right: 1rem;
+  opacity: .6;
+
 }
+
 
 .quote-btn {
   margin-top: 1rem;
@@ -40,8 +53,18 @@
   font-size: 20px;
   font-weight: bold;
   font-family: $primary-font;
-  background: linear-gradient(45deg, $primary-text, $secondary-text);
+  background: linear-gradient(to right, $primary-text, $secondary-text);
   color: #fff;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: .05s ease-in-out;
+}
+
+.quote-btn:hover {
+  background: linear-gradient(to right, darken($primary-text, 10), darken($secondary-text, 10));
+}
+
+.quote-btn:active {
+  transform: scale(.98);
 }
