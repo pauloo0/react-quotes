@@ -1,10 +1,17 @@
 import React from 'react'
+import quotes from '../data/quotes'
 
 const Quote = () => {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      {quotes.map((quote) => (
+        <div className='quote-container'>
+          <h3 className='quote'>{quote.phrase}</h3>
+          <p className='author'>{quote.author}</p>
+          <br />
+        </div>
+      ))}
+    </>
   )
 }
 
