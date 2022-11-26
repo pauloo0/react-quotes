@@ -8,9 +8,13 @@ const Quote = () => {
   })
 
   const generateQuote = () => {
-    const i = Math.floor(Math.random() * quotes.length)
+    // const i = Math.floor(Math.random() * quotes.length)
 
-    setQuote({ quote: quotes[i].phrase, author: quotes[i].author })
+    // setQuote({ quote: quotes[i].phrase, author: quotes[i].author })
+
+    fetch('https://lucifer-quotes.vercel.app/api/quotes')
+      .then((response) => response.json())
+      .then((res) => setQuote({ quote: res[0].quote, author: res[0].author }))
   }
 
   useEffect(() => generateQuote, [])
